@@ -7,7 +7,6 @@ from PIL import Image
 import os
 import re
 
-
 driver = webdriver.Chrome()
 sleep(6)
 driver.get("https://demo.guru99.com/test/delete_customer.php") 
@@ -34,7 +33,7 @@ else:
     print("File not exist")
     #filename = re.findall("([^\/]+\.png)", path)
     driver.save_screenshot(filename+'.png')
-    image = Image.open(filename[0])
+    image = Image.open(filename+".png")
     image.show()
     
-
+    
